@@ -20,8 +20,8 @@ class UserCreate
   private
 
   def update_user(user_hash)
-    user = User.find_by(email: user_hash['email'].to_s)
-    user.assign_attributes user_hash.slice('first_name', 'last_name')
+    user = User.find_by(id: user_hash['id'])
+    user.assign_attributes user_hash.slice('first_name', 'last_name', 'email').compact
     user.save!
   rescue StandardError => e
     create_log(false, user, message: e.message)
