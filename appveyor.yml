@@ -1,0 +1,25 @@
+# appveyor.yml
+version: 1.0.{build}-{branch}
+
+image: Visual Studio 2017
+
+init:
+  - ps: iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+
+install:
+  - ps: scoop install ruby@2.5.5-1
+  - ruby -v
+  #- SET PATH=C:\Ruby2.5.0-1\bin;%PATH%
+  - gem install bundler -v 1.17.3
+  - bundle install
+
+build: off
+
+before_test:
+  - ruby -v
+  - gem -v
+  - bundle -v
+
+test_script:
+  # - bundle exec rake
+  # - bundle exec rspec spec/*
