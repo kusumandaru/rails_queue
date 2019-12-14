@@ -1,6 +1,8 @@
 # README
 
-This README for rails queue.
+<img src="https://ci.appveyor.com/api/projects/status/github/kusumandaru/rails-queue?branch=master&svg=true">
+
+Rails Queue Example
 
 * Ruby version
 ruby 2.5.0
