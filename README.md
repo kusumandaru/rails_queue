@@ -1,20 +1,21 @@
 # README
 
-<img src="https://ci.appveyor.com/api/projects/status/github/kusumandaru/rails-queue?branch=master&svg=true">
+<img src="https://ci.appveyor.com/api/projects/status/97w7dbr26x515i6p/branch/master?svg=true">
 
 Rails Queue Example
 
 * Ruby version
-ruby 2.5.0
-rails 5.2.3
+ruby >= 2.5.5
+rails >= 5.2.4.3
 
 * System dependencies
-rabbitmq 3.7
+rabbitmq >= 3.7
 
 * Configuration
 
 
 * Database creation
+cp .env.example .env
 rails db:create
 
 * Database initialization

@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4.3'
+gem 'rails', '~> 5.2.4.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
@@ -46,6 +46,11 @@ gem 'sneakers'
 
 # redis
 gem 'redis'
+
+# security update
+gem "websocket-extensions", ">= 0.1.5"
+gem "rack", ">= 2.2.3"
+gem "actionview", ">= 5.2.4.4"
 
 group :development, :test do
   gem 'byebug', platforms: ['mri', 'mingw', 'x64_mingw']
